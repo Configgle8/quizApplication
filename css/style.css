@@ -1,0 +1,39 @@
+.container{
+    background: darkgoldenrod;
+    height: 100vh;
+    width: 100%;
+    display: grid;
+}
+.splash{
+    cursor: none;
+    background: black;
+    height: 100%;
+    width: 100%;
+    top: 50%;
+    right: 50%;
+    transform: translateY(-300px);
+    transition: all ease-in-out 600ms;
+}
+.hidden{
+    transition: 2.0s;
+    display: none;
+}
+.splash-header{
+    height: 90%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    vertical-align: center;
+    transform: translateY(30%);
+}
+.splash-header:hover{
+    transform: scale(1.5);
+}
+.frontlogo{
+    height: 90%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
