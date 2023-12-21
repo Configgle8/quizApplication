@@ -14,6 +14,10 @@ addGlobalEventListener("click", "#start", e => {
     startGame();
 });
 
+addGlobalEventListener("click", "#contact", e => {
+    showContactLinks();
+});
+
 // Function to fetch quiz data
 async function fetchQuizData() {
     try {
@@ -67,6 +71,11 @@ document.addEventListener('DOMContentLoaded', displayQuiz);
 function startGame() {
     buttonGrid.remove(); // Remove the entire grid container
     logo.forEach(logoElement => logoElement.remove()); // Remove each logo element
+}
+
+function showContactLinks(){
+    buttonGrid.remove(); // Remove the entire grid 
+    logo.forEach(logoElement => logoElement.remove()); // Remove each 
 }
 
  /*   displayQA();
