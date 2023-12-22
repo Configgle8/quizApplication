@@ -76,7 +76,21 @@ function startGame() {
 function showContactLinks(){
     buttonGrid.remove(); // Remove the entire grid 
     logo.forEach(logoElement => logoElement.remove()); // Remove each 
+    let socialLinks = document.querySelector('.social-links');
+    socialLinks.style.display='flex';
+    socialLinks.style.verticalAlign='middle';
+    
+
 }
+
+
+
+
+
+
+
+
+
 
  /*   displayQA();
 }
