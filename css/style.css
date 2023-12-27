@@ -115,6 +115,7 @@ body {
     background: lightgray;
 }
 .logoContainer{
+    margin-top: 20px;
     margin-bottom: 20px;
 }
 .linkContainer{
@@ -184,4 +185,10 @@ body {
 .center{
     display: inline-block;
     vertical-align: middle;
+}
+#fileInput{
+    display: none;
+}
+.navbar{
+    display: none;
 }

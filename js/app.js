@@ -9,6 +9,9 @@ const startButton = document.getElementById("start");
 const buttonGrid = document.querySelector('.grid'); // Use querySelector to get a single element
 const logoLoop = document.getElementsByClassName("Logo");
 const logo = Array.from(logoLoop);
+const fileInput = document.getElementById("fileInput");
+const nav = document.querySelector('.navbar');
+const back= document.querySelector('#back');
 
 addGlobalEventListener("click", "#start", e => {
     startGame();
@@ -18,6 +21,12 @@ addGlobalEventListener("click", "#contact", e => {
     showContactLinks();
 });
 
+addGlobalEventListener("click", "#list", e => {
+    showQuizListPage();
+});
+addGlobalEventListener("click", "#back", e => {
+    backFunction();
+});
 // Function to fetch quiz data
 async function fetchQuizData() {
     try {
@@ -62,6 +71,7 @@ async function displayQuiz() {
 
         container.appendChild(questionElement);
     });
+    console.log("Quiz data:", quizData);
 }
 
 // Call the displayQuiz function when the DOM content is fully loaded
@@ -71,6 +81,27 @@ document.addEventListener('DOMContentLoaded', displayQuiz);
 function startGame() {
     buttonGrid.remove(); // Remove the entire grid container
     logo.forEach(logoElement => logoElement.remove()); // Remove each logo element
+    const selectedFile = fileInput.files[0];
+
+    if (selectedFile) {
+        const reader = new FileReader();
+
+        reader.onload = function (e) {
+            const fileContent = e.target.result;
+
+            try {
+                const quizData = JSON.parse(fileContent);
+                displayQuiz(quizData);
+            } catch (error) {
+                console.error("Error parsing JSON file:", error);
+            }
+        };
+
+        reader.readAsText(selectedFile);
+    } else {
+        console.error("No file selected.");
+    }
+    
 }
 
 function showContactLinks(){
@@ -83,7 +114,30 @@ function showContactLinks(){
 
 }
 
+function showQuizListPage() {
+    buttonGrid.remove(); // Remove the entire grid 
+    logo.forEach(logoElement => logoElement.remove()); // Remove each
+    nav.style.display='flex';
 
+
+    // Create and append elements for the Quiz List page
+   
+   const input = document.querySelector('.fileGrid');
+   input.style.display='flex';
+   input.style.verticalAlign='center';
+   /*const fileInput = document.createElement('input');
+   fileInput.type = 'file';
+   // Add event listener to handle file upload
+   fileInput.addEventListener('change', handleFileUpload);
+   container.appendChild(fileInput);
+   fileInput.style.display='auto' */
+}
+
+function backFunction(){
+    window.history.back();
+}
+
+ 
 
 
 
