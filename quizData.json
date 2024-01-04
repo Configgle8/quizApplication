@@ -1,13 +1,23 @@
 [
     {
-        "question": "What is the capital of France?",
-        "options": ["Paris", "Berlin", "Madrid", "Rome"],
-        "correctAnswer": "Paris"
+        "question": "What is Thalia's Nickname?",
+        "answer": "Mama"
     },
     {
-        "question": "Which planet is known as the Red Planet?",
-        "options": ["Mars", "Venus", "Jupiter", "Saturn"],
-        "correctAnswer": "Mars"
+        "question": "How old is Thalia?",
+        "answer": "19"
+    },
+    {
+        "question": "Thalia likes _______. (character)",
+        "answer": "Hello Kitty"
+    },
+    {
+        "question": "Thalia's middle name?",
+        "answer": "Marie"
+    },
+    {
+        "question": "Thalia is a Leasing ____________.",
+        "answer": "Professional"
     }
 
 ]

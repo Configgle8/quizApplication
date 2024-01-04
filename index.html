@@ -10,6 +10,14 @@
 <body>
     <!-- Main container for the page -->
     <div class="container">
+        <!-- Question and Answer Fields-->
+        <div id='quiz-container' class="quizField">
+        <div id="question"></div>
+        <input type="text" id="answer-input" placeholder="Your Answer">
+        <button class='button-56' id="submit-btn" onclick="submitAnswer()">Submit</button>
+        <div id="result"></div>
+        <div id="total-score"></div>
+    </div>
         <!-- Logo container -->
         <div class="logoContainer">
             <img src="assets/r1Logo.gif" alt="" class="Logo">
@@ -18,14 +26,13 @@
         <!-- Button grid -->
         <div class="grid">
             <button id="start" class="button-56" role="button">Start</button>
-            <button id='list' class="button-56" role="button">Quiz List</button>
-            <button id='contact' class="button-56" role="button"
-            >Contact</button>
+            <label  for='fileInput' id='list' class="button-56">Open JSON File </label>
+                <input type="file" id="fileInput" class="file" accept=".json" /></button>
+                 
+            <button id='contact' class="button-56" role="button">Contact</button>
         </div>
         
         <!-- Container for quiz questions -->
-        <div id="quiz-container" class="Container">
-            <!-- Quiz questions will be dynamically added here -->
         </div>
 
         <!-- Contact Display-->
@@ -36,15 +43,10 @@
 
         <!-- JSON File Input -->
         <div class="fileGrid">
-        <input type="file" id="fileInput" class="file" accept=".json" /></div>
+            <input type="file" id="fileInput" class="file" accept=".json" />
+        </div>
         </div>
     </div>
-    <div class="navbar">
-
-        <button id="back" class="button-56" role="button"><img src="assets/Frame 1.svg" alt=""></button>
-
-    </div>
-   
         
     <!-- Include your JavaScript file -->
     <script src="js/app.js"></script>
